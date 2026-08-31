@@ -50,8 +50,8 @@ The retrieval engine is deterministic and runs entirely within the Streamlit pro
 Python 3.10 or later is required.
 
 ```bash
-git clone https://github.com/Daveokw/Python-Tutorial-Chatbot-Test.git
-cd Python-Tutorial-Chatbot-Test
+git clone https://github.com/Daveokw/Python-Tutorial-Chatbot.git
+cd Python-Tutorial-Chatbot
 python -m venv .venv
 python -m pip install -r requirements.txt
 streamlit run app.py
