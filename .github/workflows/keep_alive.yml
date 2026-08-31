@@ -33,7 +33,7 @@ jobs:
         run: npx playwright install --with-deps chromium
 
       - name: Verify the deployed application
-        run: npm run keep-alive -- "https://py-chatbot.streamlit.app/"
+        run: npm run keep-alive -- "https://python-tutorial-chatbot.streamlit.app/"
 
       - name: Upload failure screenshot
         if: failure()

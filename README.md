@@ -2,7 +2,7 @@
 
 A lightweight Streamlit chatbot that retrieves concise explanations and examples for concepts covered by the official Python tutorial.
 
-[Open the live application](https://py-chatbot.streamlit.app/)
+[Open the live application](https://python-tutorial-chatbot.streamlit.app/)
 
 ## Overview
 

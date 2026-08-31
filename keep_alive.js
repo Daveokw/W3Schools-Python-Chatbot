@@ -1,6 +1,6 @@
 const { chromium } = require('playwright');
 
-const DEFAULT_ALLOWED_HOST = 'py-chatbot.streamlit.app';
+const DEFAULT_ALLOWED_HOST = 'python-tutorial-chatbot.streamlit.app';
 const APP_HEADING = 'Python Tutorial Chatbot';
 const FAILURE_SCREENSHOT = 'keep_alive_screenshot.png';
 const INITIAL_STATE_TIMEOUT_MS = 120000;
