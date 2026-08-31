@@ -1,0 +1,45 @@
+name: Keep Streamlit App Awake
+
+on:
+  schedule:
+    - cron: "11 */4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: keep-python-tutorial-chatbot-awake
+  cancel-in-progress: true
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install locked Node dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Install Chromium browser
+        run: npx playwright install --with-deps chromium
+
+      - name: Verify the deployed application
+        run: npm run keep-alive -- "https://py-chatbot.streamlit.app/"
+
+      - name: Upload failure screenshot
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: keep-alive-screenshot
+          path: keep_alive_screenshot.png
+          if-no-files-found: ignore
+          retention-days: 3

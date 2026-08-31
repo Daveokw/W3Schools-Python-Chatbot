@@ -1,0 +1,362 @@
+[
+  {
+    "slug": "python-overview",
+    "title": "Python overview",
+    "aliases": ["python", "python programming language", "what is python"],
+    "summary": "Python is a high-level programming language designed for clear, readable programs and rapid development.",
+    "explanation": "It supports several programming styles, includes a broad standard library, and uses an interpreter to execute Python code. This chatbot focuses on the language features introduced in the official tutorial.",
+    "example": "message = \"Hello, Python\"\nprint(message)",
+    "source_url": "https://docs.python.org/3/tutorial/index.html"
+  },
+  {
+    "slug": "variables",
+    "title": "Variables and assignment",
+    "aliases": ["variable", "variables", "assignment", "assign a value"],
+    "summary": "A variable is a name bound to a value by an assignment statement.",
+    "explanation": "Python determines the value's type at runtime, so a variable declaration does not include a separate type annotation. Names are case-sensitive and should clearly describe the values they reference.",
+    "example": "course = \"Python\"\nlesson_count = 12\nis_active = True",
+    "source_url": "https://docs.python.org/3/tutorial/introduction.html"
+  },
+  {
+    "slug": "numbers",
+    "title": "Numbers and arithmetic",
+    "aliases": ["number", "numbers", "integer", "float", "arithmetic", "division"],
+    "summary": "Python provides numeric types such as integers and floating-point numbers together with familiar arithmetic operators.",
+    "explanation": "The / operator performs floating-point division, // performs floor division, % returns a remainder, and ** performs exponentiation. Parentheses can make calculation order explicit.",
+    "example": "total = 17 + 5\naverage = total / 2\nquotient = total // 4\nremainder = total % 4",
+    "source_url": "https://docs.python.org/3/tutorial/introduction.html#using-python-as-a-calculator"
+  },
+  {
+    "slug": "strings",
+    "title": "Strings",
+    "aliases": ["string", "strings", "text", "f string", "f-string", "string slicing"],
+    "summary": "A string is an immutable sequence of Unicode characters used to represent text.",
+    "explanation": "Strings support indexing, slicing, concatenation, and many built-in methods. Formatted string literals, usually called f-strings, insert expressions into text using braces.",
+    "example": "name = \"Ada\"\nmessage = f\"Hello, {name}\"\nfirst_letter = name[0]\nprint(message)",
+    "source_url": "https://docs.python.org/3/tutorial/introduction.html#text"
+  },
+  {
+    "slug": "lists",
+    "title": "Lists",
+    "aliases": ["list", "lists", "array", "mutable sequence"],
+    "summary": "A list is an ordered, mutable collection that can contain values of different types.",
+    "explanation": "List items are accessed by zero-based indexes. Lists support slicing and can be changed with operations such as append, extend, insert, remove, and pop.",
+    "example": "languages = [\"Python\", \"JavaScript\"]\nlanguages.append(\"Go\")\nprint(languages[0])",
+    "source_url": "https://docs.python.org/3/tutorial/introduction.html#lists"
+  },
+  {
+    "slug": "tuples",
+    "title": "Tuples",
+    "aliases": ["tuple", "tuples", "immutable sequence", "tuple unpacking"],
+    "summary": "A tuple is an ordered sequence whose items cannot be replaced, added, or removed after creation.",
+    "explanation": "Tuples are useful for fixed groups of values and support packing and unpacking. A one-item tuple needs a trailing comma so Python can distinguish it from a parenthesised expression.",
+    "example": "point = (4, 7)\nx, y = point\nsingle_item = (\"Python\",)",
+    "source_url": "https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences"
+  },
+  {
+    "slug": "list-versus-tuple",
+    "title": "Lists compared with tuples",
+    "aliases": ["list vs tuple", "list versus tuple", "difference between list and tuple", "difference between a list and tuple", "difference between a list and a tuple", "lists and tuples"],
+    "summary": "Lists and tuples are both ordered sequences, but lists are mutable while tuples are immutable.",
+    "explanation": "Choose a list when the collection needs to change. Choose a tuple for a fixed record or when immutability communicates that the group should remain unchanged.",
+    "example": "editable = [\"draft\", \"review\"]\nfixed_point = (10, 20)\neditable.append(\"published\")",
+    "source_url": "https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences"
+  },
+  {
+    "slug": "sets",
+    "title": "Sets",
+    "aliases": ["set", "sets", "unique values", "set operations"],
+    "summary": "A set is an unordered collection of unique, hashable values.",
+    "explanation": "Sets are useful for membership tests, removing duplicates, and mathematical operations including union, intersection, difference, and symmetric difference.",
+    "example": "tags = {\"python\", \"web\", \"python\"}\nprint(tags)\nprint(\"python\" in tags)",
+    "source_url": "https://docs.python.org/3/tutorial/datastructures.html#sets"
+  },
+  {
+    "slug": "dictionaries",
+    "title": "Dictionaries",
+    "aliases": ["dictionary", "dictionaries", "dict", "key value", "mapping"],
+    "summary": "A dictionary is a mutable mapping that associates unique, hashable keys with values.",
+    "explanation": "Values are retrieved with their keys rather than numeric positions. Assigning to a new key adds an item, assigning to an existing key replaces its value, and get can provide a fallback for a missing key.",
+    "example": "user = {\"name\": \"Ada\", \"level\": 1}\nuser[\"level\"] = 2\ncountry = user.get(\"country\", \"Unknown\")",
+    "source_url": "https://docs.python.org/3/tutorial/datastructures.html#dictionaries"
+  },
+  {
+    "slug": "conditionals",
+    "title": "Conditional statements",
+    "aliases": ["if statement", "if statements", "conditional", "conditionals", "elif", "else"],
+    "summary": "Conditional statements select which code runs according to Boolean conditions.",
+    "explanation": "An if branch is checked first, optional elif branches provide further conditions, and an optional else branch handles the remaining case. Indentation defines each branch's body.",
+    "example": "score = 72\nif score >= 70:\n    grade = \"A\"\nelif score >= 60:\n    grade = \"B\"\nelse:\n    grade = \"C\"",
+    "source_url": "https://docs.python.org/3/tutorial/controlflow.html#if-statements"
+  },
+  {
+    "slug": "loops",
+    "title": "Loops",
+    "aliases": ["loop", "loops", "for loop", "while loop", "iteration"],
+    "summary": "Loops repeat a block of code: for iterates over items, while repeats while a condition remains true.",
+    "explanation": "Use break to leave the nearest loop and continue to skip to its next iteration. A for loop is normally the clearer choice when iterating over a collection.",
+    "example": "for language in [\"Python\", \"Go\", \"Rust\"]:\n    if language == \"Go\":\n        continue\n    print(language)",
+    "source_url": "https://docs.python.org/3/tutorial/controlflow.html#for-statements"
+  },
+  {
+    "slug": "range",
+    "title": "The range function",
+    "aliases": ["range", "range function", "sequence of numbers"],
+    "summary": "The range function represents an arithmetic progression of integers and is commonly used with for loops.",
+    "explanation": "Its stop value is excluded. range(stop) starts at zero, while range(start, stop, step) lets you select the starting value and interval without first creating a full list.",
+    "example": "for number in range(2, 10, 2):\n    print(number)",
+    "source_url": "https://docs.python.org/3/tutorial/controlflow.html#the-range-function"
+  },
+  {
+    "slug": "functions",
+    "title": "Functions",
+    "aliases": ["function", "functions", "def", "define a function", "return value"],
+    "summary": "A function is a reusable block of code defined with def and executed when it is called.",
+    "explanation": "Parameters receive input values, a docstring can describe the function, and return sends a result to the caller. A function that reaches its end without return produces None.",
+    "example": "def greet(name):\n    \"\"\"Return a short greeting.\"\"\"\n    return f\"Hello, {name}\"\n\nprint(greet(\"Ada\"))",
+    "source_url": "https://docs.python.org/3/tutorial/controlflow.html#defining-functions"
+  },
+  {
+    "slug": "function-arguments",
+    "title": "Function arguments",
+    "aliases": ["argument", "arguments", "parameter", "parameters", "keyword argument", "default argument", "args kwargs"],
+    "summary": "Function arguments provide values for parameters and may be positional, keyword-based, or supplied through defined defaults.",
+    "explanation": "Python also supports positional-only and keyword-only parameters. The *args form collects extra positional arguments, while **kwargs collects extra keyword arguments.",
+    "example": "def describe(name, role=\"developer\"):\n    return f\"{name} is a {role}\"\n\nprint(describe(\"Ada\", role=\"engineer\"))",
+    "source_url": "https://docs.python.org/3/tutorial/controlflow.html#more-on-defining-functions"
+  },
+  {
+    "slug": "list-comprehensions",
+    "title": "List comprehensions",
+    "aliases": ["list comprehension", "list comprehensions", "comprehension"],
+    "summary": "A list comprehension creates a list from an iterable using a compact expression.",
+    "explanation": "It contains an output expression followed by a for clause and may include conditions. Use it when the transformation remains readable; a normal loop is clearer for complex logic.",
+    "example": "squares = [number ** 2 for number in range(6)]\neven_squares = [value for value in squares if value % 2 == 0]",
+    "source_url": "https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions"
+  },
+  {
+    "slug": "modules",
+    "title": "Modules and imports",
+    "aliases": ["module", "modules", "import", "imports", "from import"],
+    "summary": "A module is a Python file containing reusable definitions and statements that can be imported by other code.",
+    "explanation": "The import statement adds a module name to the current namespace. A from import statement selects specific names, while the if __name__ == '__main__' pattern separates script behaviour from imported behaviour.",
+    "example": "import math\nfrom pathlib import Path\n\nprint(math.sqrt(81))\nprint(Path.cwd())",
+    "source_url": "https://docs.python.org/3/tutorial/modules.html"
+  },
+  {
+    "slug": "exceptions",
+    "title": "Exceptions",
+    "aliases": ["exception", "exceptions", "error handling", "try except", "try and except", "finally", "raise"],
+    "summary": "Exceptions report errors detected while a program is running and can be handled with try and except.",
+    "explanation": "Catch the most specific expected exception, use else for work that should run only when no exception occurred, and use finally for clean-up that must run regardless of the outcome.",
+    "example": "try:\n    number = int(\"42\")\nexcept ValueError:\n    print(\"That is not an integer\")\nelse:\n    print(number)",
+    "source_url": "https://docs.python.org/3/tutorial/errors.html#handling-exceptions"
+  },
+  {
+    "slug": "classes",
+    "title": "Classes and objects",
+    "aliases": ["class", "classes", "object", "objects", "oop", "object oriented programming", "constructor", "init"],
+    "summary": "A class defines a new type that combines data attributes with methods, while an object is an instance of that class.",
+    "explanation": "The __init__ method commonly initialises new instances, and self refers to the instance receiving a method call. Classes help group related state and behaviour behind a clear interface.",
+    "example": "class Greeter:\n    def __init__(self, name):\n        self.name = name\n\n    def greet(self):\n        return f\"Hello, {self.name}\"\n\nprint(Greeter(\"Ada\").greet())",
+    "source_url": "https://docs.python.org/3/tutorial/classes.html"
+  },
+  {
+    "slug": "inheritance",
+    "title": "Inheritance",
+    "aliases": ["inheritance", "subclass", "base class", "derived class", "super"],
+    "summary": "Inheritance creates a class that can reuse or specialise behaviour from one or more base classes.",
+    "explanation": "A derived class can add methods or override inherited methods. Use inheritance where the subtype relationship is meaningful; composition is often clearer when objects merely collaborate.",
+    "example": "class Animal:\n    def speak(self):\n        return \"sound\"\n\nclass Dog(Animal):\n    def speak(self):\n        return \"bark\"",
+    "source_url": "https://docs.python.org/3/tutorial/classes.html#inheritance"
+  },
+  {
+    "slug": "iterators-generators",
+    "title": "Iterators and generators",
+    "aliases": ["iterator", "iterators", "generator", "generators", "yield", "lazy iteration"],
+    "summary": "An iterator produces values one at a time, and a generator is a concise way to create an iterator with yield.",
+    "explanation": "Generators preserve their execution state between yielded values and calculate items when requested. This can reduce memory use when a complete collection is unnecessary.",
+    "example": "def countdown(start):\n    while start > 0:\n        yield start\n        start -= 1\n\nfor number in countdown(3):\n    print(number)",
+    "source_url": "https://docs.python.org/3/tutorial/classes.html#generators"
+  },
+  {
+    "slug": "file-io",
+    "title": "Reading and writing files",
+    "aliases": ["file", "files", "file handling", "read file", "write file", "open file", "with open", "context manager"],
+    "summary": "The open function creates a file object for reading or writing data.",
+    "explanation": "A with block closes the file automatically, including when an error occurs. Specify an encoding for text files and choose the mode deliberately, because write mode replaces an existing file.",
+    "example": "from pathlib import Path\n\npath = Path(\"notes.txt\")\npath.write_text(\"Learn Python\\n\", encoding=\"utf-8\")\nprint(path.read_text(encoding=\"utf-8\"))",
+    "source_url": "https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files"
+  },
+  {
+    "slug": "virtual-environments",
+    "title": "Virtual environments and packages",
+    "aliases": ["virtual environment", "virtual environments", "venv", "pip", "package installation", "requirements"],
+    "summary": "A virtual environment gives a project an isolated Python installation and dependency set.",
+    "explanation": "Create one with python -m venv .venv, activate it using the command for your operating system, and install packages with python -m pip. Isolation prevents dependency versions from different projects conflicting.",
+    "example": "python -m venv .venv\npython -m pip install streamlit",
+    "source_url": "https://docs.python.org/3/tutorial/venv.html"
+  },
+  {
+    "slug": "booleans-none",
+    "title": "Boolean values and None",
+    "aliases": ["boolean", "booleans", "bool", "true false", "none", "null value", "truth value"],
+    "summary": "The Boolean values True and False represent logical outcomes, while None represents the absence of a value.",
+    "explanation": "Comparisons produce Boolean results, and values such as zero, empty collections, and None are false in Boolean contexts. Use is None rather than equality when checking specifically for None.",
+    "example": "result = None\nif result is None:\n    print(\"No result yet\")\n\nis_ready = True",
+    "source_url": "https://docs.python.org/3/tutorial/datastructures.html#more-on-conditions"
+  },
+  {
+    "slug": "comparisons-logic",
+    "title": "Comparisons and Boolean logic",
+    "aliases": ["comparison", "comparisons", "equality comparison", "not equal comparison", "logical operators", "and or not", "chained comparison"],
+    "summary": "Comparison operators test relationships between values, and the operators and, or, and not combine or reverse Boolean conditions.",
+    "explanation": "Python supports chained comparisons such as 0 < score <= 100. The and and or operators short-circuit, so later expressions are evaluated only when needed.",
+    "example": "age = 21\nhas_ticket = True\ncan_enter = age >= 18 and has_ticket\nvalid_score = 0 <= 85 <= 100",
+    "source_url": "https://docs.python.org/3/tutorial/datastructures.html#comparing-sequences-and-other-types"
+  },
+  {
+    "slug": "membership-identity",
+    "title": "Membership and identity tests",
+    "aliases": ["membership", "in operator", "not in", "identity", "is operator", "is not", "equality vs identity"],
+    "summary": "The in operator tests membership, while is tests whether two names refer to the same object.",
+    "explanation": "Use == to compare values and is mainly for identity checks such as value is None. The expressions in and not in work with collections and other containers.",
+    "example": "roles = {\"admin\", \"editor\"}\nprint(\"admin\" in roles)\nvalue = None\nprint(value is None)",
+    "source_url": "https://docs.python.org/3/tutorial/datastructures.html#more-on-conditions"
+  },
+  {
+    "slug": "indexing-slicing",
+    "title": "Indexing and slicing",
+    "aliases": ["index", "indexing", "slice", "slicing", "negative index", "slice notation"],
+    "summary": "Indexing selects one sequence item, while slicing selects a range using start, stop, and optional step positions.",
+    "explanation": "Indexes start at zero, negative indexes count from the end, and a slice excludes its stop position. Omitted slice positions use the natural beginning, end, or step.",
+    "example": "values = [10, 20, 30, 40, 50]\nfirst = values[0]\nlast = values[-1]\nmiddle = values[1:4]\nreversed_values = values[::-1]",
+    "source_url": "https://docs.python.org/3/tutorial/introduction.html#lists"
+  },
+  {
+    "slug": "sequence-operations",
+    "title": "Sequence operations",
+    "aliases": ["sequence", "sequences", "concatenation", "length", "len", "min max sum"],
+    "summary": "Python sequences share operations including indexing, slicing, membership tests, concatenation, repetition, and length calculation.",
+    "explanation": "Strings, lists, tuples, and ranges are sequence types, although their mutability differs. Built-ins such as len, min, max, and sum work where the contained values support the requested operation.",
+    "example": "values = [3, 1, 4]\nprint(len(values))\nprint(sum(values))\ncombined = values + [1, 5]",
+    "source_url": "https://docs.python.org/3/tutorial/datastructures.html"
+  },
+  {
+    "slug": "sorting",
+    "title": "Sorting collections",
+    "aliases": ["sort", "sorting", "sorted", "list sort", "sort key", "reverse sorting"],
+    "summary": "The sorted function returns a new sorted list, while list.sort changes an existing list in place.",
+    "explanation": "Both accept key and reverse arguments. A key function returns the value used for comparison, which makes it possible to sort structured data without changing the original items.",
+    "example": "names = [\"Grace\", \"ada\", \"Guido\"]\nordered = sorted(names, key=str.casefold)\nprint(ordered)",
+    "source_url": "https://docs.python.org/3/tutorial/datastructures.html#more-on-lists"
+  },
+  {
+    "slug": "enumerate-zip",
+    "title": "Enumerate and zip",
+    "aliases": ["enumerate", "zip", "loop with index", "combine iterables", "parallel iteration"],
+    "summary": "enumerate supplies an index with each item, while zip pairs items from multiple iterables.",
+    "explanation": "These built-ins avoid manual counter management and make parallel iteration clearer. zip stops when the shortest input iterable is exhausted.",
+    "example": "names = [\"Ada\", \"Guido\"]\nscores = [95, 91]\nfor position, (name, score) in enumerate(zip(names, scores), start=1):\n    print(position, name, score)",
+    "source_url": "https://docs.python.org/3/tutorial/datastructures.html#looping-techniques"
+  },
+  {
+    "slug": "dictionary-iteration",
+    "title": "Dictionary iteration",
+    "aliases": ["iterate dictionary", "loop dictionary", "dictionary items", "dictionary keys", "dictionary values"],
+    "summary": "A dictionary can be iterated by key, value, or key-value pair.",
+    "explanation": "Iteration over the dictionary itself produces keys. Use items for key-value pairs, keys for an explicit key view, and values for values without their keys.",
+    "example": "scores = {\"Ada\": 95, \"Guido\": 91}\nfor name, score in scores.items():\n    print(name, score)",
+    "source_url": "https://docs.python.org/3/tutorial/datastructures.html#looping-techniques"
+  },
+  {
+    "slug": "set-dictionary-comprehensions",
+    "title": "Set and dictionary comprehensions",
+    "aliases": ["set comprehension", "dictionary comprehension", "dict comprehension", "mapping comprehension"],
+    "summary": "Set and dictionary comprehensions construct collections from concise expressions and iteration clauses.",
+    "explanation": "A set comprehension contains one output expression, while a dictionary comprehension produces key-value pairs. Conditions can filter which source items appear in the result.",
+    "example": "squares = {number ** 2 for number in range(6)}\nlengths = {word: len(word) for word in [\"list\", \"tuple\"]}",
+    "source_url": "https://docs.python.org/3/tutorial/datastructures.html#sets"
+  },
+  {
+    "slug": "lambda",
+    "title": "Lambda expressions",
+    "aliases": ["lambda", "lambda function", "anonymous function", "small function"],
+    "summary": "A lambda expression creates a small anonymous function from a single expression.",
+    "explanation": "Lambdas are useful for short functions passed to operations such as sorting. Use def when logic needs statements, documentation, annotations, or a meaningful reusable name.",
+    "example": "records = [(\"Ada\", 95), (\"Guido\", 91)]\nrecords.sort(key=lambda record: record[1], reverse=True)",
+    "source_url": "https://docs.python.org/3/tutorial/controlflow.html#lambda-expressions"
+  },
+  {
+    "slug": "scope",
+    "title": "Scopes and namespaces",
+    "aliases": ["scope", "scopes", "namespace", "namespaces", "local variable", "global variable", "nonlocal", "legb"],
+    "summary": "A namespace maps names to objects, and a scope determines which namespace is searched for a name.",
+    "explanation": "Function assignments normally create local names. global targets a module-level name, while nonlocal targets a name in an enclosing function scope; both should be used deliberately.",
+    "example": "message = \"module value\"\n\ndef show():\n    message = \"local value\"\n    return message\n\nprint(show())",
+    "source_url": "https://docs.python.org/3/tutorial/classes.html#python-scopes-and-namespaces"
+  },
+  {
+    "slug": "docstrings-annotations",
+    "title": "Docstrings and function annotations",
+    "aliases": ["docstring", "docstrings", "function annotation", "function annotations", "type hint", "type hints", "return annotation"],
+    "summary": "A docstring documents an object, while function annotations attach optional metadata to parameters and return values.",
+    "explanation": "Annotations do not enforce types by themselves. They support readers and external tools, while a concise docstring explains a function's purpose and important behaviour.",
+    "example": "def double(value: int) -> int:\n    \"\"\"Return value multiplied by two.\"\"\"\n    return value * 2",
+    "source_url": "https://docs.python.org/3/tutorial/controlflow.html#documentation-strings"
+  },
+  {
+    "slug": "match-statements",
+    "title": "Match statements",
+    "aliases": ["match", "match statement", "case", "pattern matching", "structural pattern matching"],
+    "summary": "A match statement compares a value against structural patterns and executes the first matching case.",
+    "explanation": "Patterns can match literal values, unpack sequences, bind parts to names, and include guards. The underscore pattern acts as a wildcard fallback.",
+    "example": "status = 404\nmatch status:\n    case 200:\n        message = \"OK\"\n    case 404:\n        message = \"Not found\"\n    case _:\n        message = \"Unknown\"",
+    "source_url": "https://docs.python.org/3/tutorial/controlflow.html#match-statements"
+  },
+  {
+    "slug": "output-formatting",
+    "title": "Output formatting",
+    "aliases": ["format output", "output formatting", "print formatting", "formatted string", "format method", "repr", "str"],
+    "summary": "Python can format output with f-strings, the str.format method, or manual string operations.",
+    "explanation": "Format specifications control width, alignment, precision, and numeric presentation. str produces a readable representation, while repr aims to produce an unambiguous developer-oriented representation.",
+    "example": "name = \"Ada\"\nscore = 93.456\nprint(f\"{name}: {score:.1f}%\")",
+    "source_url": "https://docs.python.org/3/tutorial/inputoutput.html#fancier-output-formatting"
+  },
+  {
+    "slug": "json-data",
+    "title": "JSON serialisation",
+    "aliases": ["json", "serialize", "serialise", "serialization", "serialisation", "json dump", "json load"],
+    "summary": "The standard json module converts supported Python values to and from JSON text.",
+    "explanation": "Use dumps and loads for strings, or dump and load with file objects. JSON supports a limited set of data types, so custom objects need an explicit conversion strategy.",
+    "example": "import json\n\npayload = {\"name\": \"Ada\", \"active\": True}\ntext = json.dumps(payload)\nrestored = json.loads(text)",
+    "source_url": "https://docs.python.org/3/tutorial/inputoutput.html#saving-structured-data-with-json"
+  },
+  {
+    "slug": "packages",
+    "title": "Packages",
+    "aliases": ["package", "packages", "python package", "package folder", "subpackage", "init py"],
+    "summary": "A package organises related modules into a hierarchical namespace using dotted module names.",
+    "explanation": "Packages help larger programs avoid module-name collisions and group related behaviour. Imports can use absolute package paths or explicit relative imports within a package.",
+    "example": "from sound.effects import echo\n# A package can contain modules and nested subpackages.",
+    "source_url": "https://docs.python.org/3/tutorial/modules.html#packages"
+  },
+  {
+    "slug": "coding-style",
+    "title": "Python coding style",
+    "aliases": ["coding style", "style guide", "pep 8", "readable code", "naming conventions", "indentation"],
+    "summary": "Consistent formatting and clear naming make Python programs easier to read, review, and maintain.",
+    "explanation": "The tutorial recommends four-space indentation, short focused lines, sensible blank lines, helpful comments, docstrings, and consistent spacing around operators and after commas.",
+    "example": "def calculate_total(prices):\n    \"\"\"Return the sum of all prices.\"\"\"\n    return sum(prices)",
+    "source_url": "https://docs.python.org/3/tutorial/controlflow.html#intermezzo-coding-style"
+  },
+  {
+    "slug": "standard-library",
+    "title": "The Python standard library",
+    "aliases": ["standard library", "built in modules", "built-in modules", "batteries included", "os module", "math module"],
+    "summary": "Python's standard library provides modules for common tasks without requiring third-party package installation.",
+    "explanation": "Tutorial examples include operating-system interfaces, file patterns, command-line arguments, mathematics, dates, data compression, and testing. Import only the modules needed by the program.",
+    "example": "from datetime import date\nfrom statistics import mean\n\nprint(date.today())\nprint(mean([10, 20, 30]))",
+    "source_url": "https://docs.python.org/3/tutorial/stdlib.html"
+  }
+]

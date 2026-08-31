@@ -1,13 +1,1 @@
-fastapi
-python-dotenv
-sentence-transformers
-faiss-cpu
-requests
-beautifulsoup4
-tqdm
-numpy
-streamlit
-gdown
-trafilatura
-transformers
-torch
+streamlit==1.62.0

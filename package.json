@@ -1,0 +1,12 @@
+{
+  "name": "python-tutorial-chatbot-keep-alive",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Browser-based availability check for the deployed Streamlit app.",
+  "scripts": {
+    "keep-alive": "node keep_alive.js"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}
